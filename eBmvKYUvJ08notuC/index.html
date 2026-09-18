@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="robots" content="noindex,nofollow,noarchive"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow">
+<title>Strategist Offer Game Plan</title>
+<style>
+:root{--bg:#f7f7f5;--surface:#fff;--soft:#f0f1ef;--line:#e1e3e1;--line-dark:#c8cbc8;--ink:#202124;--sub:#62666b;--faint:#85898e;--blue:#326bdd;--blue-soft:#e7edf9;--green:#277b5e;--green-soft:#dcebe4;--amber:#945f11;--amber-soft:#f1e5cc;--red:#ad4c45;--red-soft:#f0ddda;
+--sans:-apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",Inter,Arial,sans-serif;--mono:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.5 var(--sans);-webkit-font-smoothing:antialiased}
+.mono{font-family:var(--mono);font-variant-numeric:tabular-nums}
+.shell{width:min(1120px,calc(100% - 32px));margin:auto}
+.topbar{position:sticky;top:0;z-index:5;border-bottom:1px solid var(--line);background:rgba(247,247,245,.94);backdrop-filter:blur(14px)}
+.topbar-in{height:62px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.identity{display:flex;align-items:baseline;gap:12px}.identity strong{font-size:16px;letter-spacing:-.02em}.identity span{color:var(--sub);font-size:12px}
+.pill{display:inline-flex;align-items:center;gap:6px;font-size:12px;color:var(--sub)}.dot{width:7px;height:7px;border-radius:50%;background:var(--green)}
+main{padding:24px 0 64px}
+.card{border:1px solid var(--line);border-radius:12px;background:var(--surface);margin-bottom:18px}
+.head{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;padding:20px 24px 0}
+.head h2{margin:0;font-size:20px;letter-spacing:-.03em}.head .note{color:var(--sub);font-size:12px}
+.body{padding:18px 24px 22px}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;padding:22px 24px 18px}
+.kpi .l{font-size:12px;color:var(--sub)}.kpi .v{font:600 28px/1.2 var(--mono);letter-spacing:-.02em;margin:4px 0 2px}.kpi .s{font:11px var(--mono);color:var(--faint)}
+.v.blue{color:var(--blue)}.v.green{color:var(--green)}.v.amber{color:var(--amber)}.v.red{color:var(--red)}
+.oneline{margin:0 24px 22px;padding:14px 16px;border-radius:9px;background:var(--soft);font-size:15px}
+.oneline b{letter-spacing:-.01em}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}.grid2 .box ul{font-size:13.5px}.grid2 .box li{margin:6px 0}
+.grid4{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+.box{border:1px solid var(--line);border-radius:10px;padding:14px;background:var(--surface)}
+.box h3{margin:0 0 2px;font-size:14px;letter-spacing:-.01em}.box .from{font:11px var(--mono);color:var(--faint);margin-bottom:8px}
+.box ul{margin:0;padding-left:17px;color:var(--sub);font-size:13px}.box li{margin:3px 0}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th{text-align:left;font-size:11px;font-weight:600;color:var(--faint);text-transform:uppercase;letter-spacing:.06em;padding:8px 10px;border-bottom:1px solid var(--line)}
+td{padding:10px;border-bottom:1px solid var(--line);vertical-align:top}tr:last-child td{border-bottom:0}
+td.n{font-family:var(--mono);white-space:nowrap}
+.tag{display:inline-block;font:600 10.5px var(--mono);padding:2px 7px;border-radius:5px}
+.t-blue{background:var(--blue-soft);color:var(--blue)}.t-green{background:var(--green-soft);color:var(--green)}.t-amber{background:var(--amber-soft);color:var(--amber)}.t-red{background:var(--red-soft);color:var(--red)}
+.phase{display:grid;grid-template-columns:150px 1fr;gap:16px;padding:16px 0;border-top:1px solid var(--line)}.phase:first-child{border-top:0;padding-top:0}
+.phase .when{font:600 12px var(--mono);color:var(--sub)}.phase .when b{display:block;font:600 15px var(--sans);color:var(--ink);margin-bottom:2px}
+.phase ul{margin:0;padding-left:17px}.phase li{margin:4px 0}
+.who{font:11px var(--mono);color:var(--faint);margin-left:4px}
+.callout{border-radius:9px;padding:13px 15px;font-size:13.5px}
+.c-amber{background:var(--amber-soft);color:#5f3d0b}.c-blue{background:var(--blue-soft);color:#24487f}
+details{border-top:1px solid var(--line)}details:first-of-type{border-top:0}
+summary{cursor:pointer;list-style:none;padding:13px 0;font-weight:600;display:flex;justify-content:space-between}
+summary::-webkit-details-marker{display:none}summary::after{content:"Show +";font:12px var(--sans);color:var(--sub);font-weight:400}details[open] summary::after{content:"Hide"}
+details>div{padding:0 0 14px;color:var(--sub)}
+.foot{color:var(--faint);font-size:11.5px;margin-top:10px}
+@media(max-width:1000px){.grid4{grid-template-columns:repeat(3,1fr)}}@media(max-width:860px){.grid2{grid-template-columns:1fr}.kpis,.grid4{grid-template-columns:1fr 1fr}.phase{grid-template-columns:1fr}}
+@media print{.topbar{position:static}.card{break-inside:avoid}}
+</style></head><body>
+<header class="topbar"><div class="shell topbar-in">
+<div class="identity"><strong>GetHookd strategist offer</strong><span>Game plan · September 18, 2026 · for Alex + Mladen</span></div>
+<span class="pill"><span class="dot"></span>Draft for the pricing call</span>
+</div></header>
+
+<main class="shell">
+
+<section class="card">
+<div class="head"><h2>The offer</h2><span class="note">Internal only</span></div>
+<div class="kpis">
+<div class="kpi"><div class="l">Our price today</div><div class="v mono">$29–129</div><div class="s">per month, per seat plan</div></div>
+<div class="kpi"><div class="l">Parker charges</div><div class="v mono blue">$299–699</div><div class="s">per month, by ad spend, 8 months old</div></div>
+<div class="kpi"><div class="l">Software cost per user</div><div class="v mono green">$3.90</div><div class="s">per month (Jul-2026 unit economics)</div></div>
+<div class="kpi"><div class="l">Pilot target</div><div class="v mono amber">10</div><div class="s">paying customers in 60 days</div></div>
+</div>
+<div class="oneline"><b>GetHookd plus a creative strategist.</b> The whole-market ad library and cloning tools we already have, with a strategist, a prompt library, an AI that knows the brand, and a person who answers in Slack. Priced on the customer's ad spend, not per seat, so nobody compares it to a $29 tool.</div>
+</section>
+
+<section class="card">
+<div class="head"><h2>What the customer gets</h2><span class="note">Each piece is taken from Foresight or Parker</span></div>
+<div class="body"><div class="grid4">
+<div class="box"><h3>A creative strategist</h3><div class="from">From Foresight</div><ul><li>Onboarding call about their brand</li><li>Every 2 weeks: 5 ads to make next, clones ready</li><li>Monthly review call on the top tier</li></ul></div>
+<div class="box"><h3>The prompt library</h3><div class="from">From Parker + Atria</div><ul><li>31 prompts that run today with no ad account</li><li>Works in the Assistant and in Claude via MCP</li><li>New prompts added monthly</li></ul></div>
+<div class="box"><h3>An AI that knows them</h3><div class="from">From Parker</div><ul><li>Saved brand profile and spied brands</li><li>Winners pushed to Slack every Monday</li><li>Runs on the whole market, which neither competitor has</li></ul></div>
+<div class="box"><h3>Their Meta ad account, connected</h3><div class="from">From all three</div><ul><li>We see their real results, so we can say "this worked for you"</li><li>Pilot: they give the strategist analyst access in Meta Business Manager</li><li>Product: one-click connect, next quarter</li></ul></div>
+<div class="box"><h3>A person who answers</h3><div class="from">From both</div><ul><li>Private Slack channel with our team</li><li>AI answers instantly, a person within hours</li><li>Parker runs this with one person</li></ul></div>
+</div></div>
+</section>
+
+<section class="card">
+<div class="head"><h2>Pricing proposal</h2><span class="note">Starting point for the three-way call, not decided</span></div>
+<div class="body">
+<table>
+<tr><th>Customer's monthly ad spend</th><th>Monthly</th><th>Annual (2 months free)</th><th>Parker, for comparison</th></tr>
+<tr><td>Under $50k</td><td class="n">$299</td><td class="n">$2,990</td><td class="n">$299 lowest tier</td></tr>
+<tr><td>$50k to $250k</td><td class="n">$499</td><td class="n">$4,990</td><td class="n">$499 middle tier</td></tr>
+<tr><td>Over $250k</td><td class="n">$799</td><td class="n">$7,990</td><td class="n">$699 up to $2M spend</td></tr>
+</table>
+<p style="color:var(--sub);margin:12px 0 0">Parker's spend bands for its two lower tiers were not stated on the call, so the comparison is by tier, not by band. Existing $29–129 plans stay exactly as they are. This is a new tier on top, not a price increase for current customers. Budget is 49% of cancel reasons, so raising prices on the base would be the wrong move.</p>
+</div>
+</section>
+
+<section class="card">
+<div class="head"><h2>Who we sell it to first</h2></div>
+<div class="body">
+<table>
+<tr><th>Group</th><th>Why</th><th>Verdict</th></tr>
+<tr><td><b>Team and Agency customers paying full price</b></td><td>They already use MCP, and they retain best: 66.7% of Agency customers make a second payment vs 52% on Pro.</td><td><span class="tag t-green">Start here</span></td></tr>
+<tr><td><b>High-spend accounts</b></td><td>The <span class="mono">revenue_priority</span> field in GHL is already split by spend, so the list can be pulled today.</td><td><span class="tag t-green">Start here</span></td></tr>
+<tr><td><b>The 161 Agency customers on the 80% coupon</b></td><td>They joined that plan by saying the price was too high. Offering them $299+ would be tone-deaf.</td><td><span class="tag t-red">Do not target</span></td></tr>
+<tr><td><b>Starter and Pro</b></td><td>Low spend, lowest retention. Upgrade path later, once the offer is proven.</td><td><span class="tag t-amber">Later</span></td></tr>
+</table>
+</div>
+</section>
+
+<section class="card">
+<div class="head"><h2>The game plan</h2><span class="note">Sell it by hand first, build only what the pilot proves</span></div>
+<div class="body">
+<div class="phase"><div class="when"><b>This week</b>Decide</div><ul>
+<li>Three-way call: agree price, who the strategist is, and what "24/7" means <span class="who">Alex · Mladen · Vitaley</span></li>
+<li>Start the 4-week strategist ramp (below) <span class="who">Vitaley</span></li>
+<li>Forward Foresight's pricing email and Parker's custom quote when they arrive <span class="who">Vitaley</span></li>
+</ul></div>
+<div class="phase"><div class="when"><b>Weeks 4 to 8</b>Pilot, no new code</div><ul>
+<li>Pull 30 target accounts from GHL, pitch on a call, close 10 <span class="who">Vitaley</span></li>
+<li>Per customer: analyst access to their Meta ad account, Slack Connect channel, onboarding call, biweekly "make these 5" list built with the MCP <span class="who">Vitaley</span></li>
+<li>Monday winners sent by hand from the prompt library <span class="who">Vitaley</span></li>
+<li>Log hours per customer every week, since that decides whether this scales <span class="who">Vitaley</span></li>
+</ul></div>
+<div class="phase"><div class="when"><b>Weeks 6 to 10</b>Build the cheap parts</div><ul>
+<li>Prompt library inside the Assistant, 7 categories, one click <span class="who">Mladen · Desi</span></li>
+<li>Scheduled weekly push to Slack, from the digest already in beta <span class="who">Mladen</span></li>
+<li>Brand profile fills itself into every prompt <span class="who">Desi</span></li>
+</ul></div>
+<div class="phase"><div class="when"><b>Next quarter</b>Close the gap</div><ul>
+<li>Meta ad-account connect. Foresight, Parker and Foreplay all have it and we don't <span class="who">Mladen</span></li>
+<li>Reviews import, which unlocks the audience prompts <span class="who">Mladen</span></li>
+<li>First strategist hire, paid for by pilot revenue <span class="who">Alex</span></li>
+</ul></div>
+</div>
+</section>
+
+<section class="card">
+<div class="head"><h2>Becoming the strategist</h2><span class="note">What Vitaley needs to know before the first paid pilot</span></div>
+<div class="body">
+<div class="grid2">
+<div class="box"><h3>What you already have</h3><div class="from">Use from day one</div><ul>
+<li><b>The market view.</b> GetHookd library plus the winner recipe: winning, active, 30+ days live, brands with 40+ ads</li>
+<li><b>Ad production.</b> Clone Ads and 44 MCP tools, which neither competitor has</li>
+<li><b>What buyers want.</b> 40+ onboarding calls with ecom owners</li>
+<li><b>Creative frameworks.</b> Hormozi hook, meat, CTA and the kaleidoscope; 20 ad frameworks; 5 levels of ad copy</li>
+<li><b>Media-buying rules.</b> Kill, scale, hold from running BMV and Capital Recreation on Meta</li>
+</ul></div>
+<div class="box"><h3>What you need to learn</h3><div class="from">The gap, about 4 weeks</div><ul>
+<li><b>Read an ecom Meta account.</b> Six numbers: spend, ROAS or CPA against their target, CTR, hook rate, hold rate, frequency</li>
+<li><b>Find what broke.</b> Low hook rate means the first 3 seconds. Low hold rate means the body. Good CTR with bad sales means the offer or the page</li>
+<li><b>Plan tests.</b> How many new concepts vs iterations per week, and why creative is now the targeting on Meta</li>
+<li><b>Write a brief.</b> Angle, 3 hooks, format, the reference ad, CTA. One page per ad</li>
+<li><b>Ecom benchmarks.</b> Your BMV numbers are lead-gen. The logic transfers, the dollar thresholds don't</li>
+</ul></div>
+</div>
+
+<h3 style="margin:22px 0 8px;font-size:15px">The job, every week</h3>
+<table>
+<tr><th>When</th><th>What</th><th>Time</th></tr>
+<tr><td>Monday</td><td>Read their account: what won, what to kill, what's fatiguing</td><td class="n">20 min</td></tr>
+<tr><td>Monday</td><td>Pull market winners in their niche from GetHookd, check their spied brands</td><td class="n">20 min</td></tr>
+<tr><td>Monday</td><td>Send the Monday note in Slack: 3 wins, 3 kills, 1 trend</td><td class="n">15 min</td></tr>
+<tr><td>Every 2 weeks</td><td>"Make these 5": five briefs, each with the reference ad and a clone ready</td><td class="n">45 min</td></tr>
+<tr><td>Ongoing</td><td>Answer Slack questions</td><td class="n">15 min</td></tr>
+<tr><td colspan="2"><b>Target per customer</b></td><td class="n"><b>~1.5 hrs</b></td></tr>
+</table>
+
+<h3 style="margin:22px 0 8px;font-size:15px">4-week ramp</h3>
+<div class="phase"><div class="when"><b>Week 1</b>Read accounts</div><ul><li>Learn the six numbers and what each one tells you</li><li>Run the full diagnosis on the BMV account you already manage</li></ul></div>
+<div class="phase"><div class="when"><b>Week 2</b>Write briefs</div><ul><li>Write 10 briefs from the GetHookd library for two real customers' niches</li><li>Have Alex or a working media buyer mark them up</li></ul></div>
+<div class="phase"><div class="when"><b>Week 3</b>Dry run</div><ul><li>Run the full weekly job for 2 friendly Agency customers, free, with their consent</li><li>Time every step. If it's over 2 hours, cut something</li></ul></div>
+<div class="phase"><div class="when"><b>Week 4</b>First paid pilots</div><ul><li>Pitch the offer with the dry-run results as proof</li></ul></div>
+
+<details><summary>Curriculum checklist (what Parker trains its AI on)</summary><div>
+Script writing · account analysis · hooks · Meta's Andromeda update (broad targeting, creative volume) · holiday season planning (BFCM) · AI video prompting. If you can explain each of these to a customer in two minutes, you're ready.
+</div></details>
+</div>
+</section>
+
+<section class="card">
+<div class="head"><h2>How we know it works</h2></div>
+<div class="kpis">
+<div class="kpi"><div class="l">Paying pilots</div><div class="v mono">10</div><div class="s">by day 60</div></div>
+<div class="kpi"><div class="l">Second payment made</div><div class="v mono green">&gt;66.7%</div><div class="s">beat Agency, our best tier</div></div>
+<div class="kpi"><div class="l">Strategist time</div><div class="v mono amber">&lt;2 hrs</div><div class="s">per customer per week</div></div>
+<div class="kpi"><div class="l">New monthly revenue</div><div class="v mono blue">$3–5k</div><div class="s">10 pilots at $299–499</div></div>
+</div>
+</section>
+
+<section class="card">
+<div class="head"><h2>Decisions and risks</h2></div>
+<div class="body">
+<details open><summary>Six decisions for the call, with my default</summary><div>
+<table>
+<tr><th>Question</th><th>Default if nobody objects</th></tr>
+<tr><td>Who is the strategist?</td><td>Vitaley for the first 10 after a 4-week ramp, then hire against revenue</td></tr>
+<tr><td>What does "24/7" mean?</td><td>AI answers instantly, a person within a few hours in business time</td></tr>
+<tr><td>Ad spend or flat price?</td><td>Ad spend bands, like both competitors</td></tr>
+<tr><td>Monthly or annual?</td><td>Both, annual with 2 months free</td></tr>
+<tr><td>Who first?</td><td>Full-price Team and Agency, high spend</td></tr>
+<tr><td>Wait for Meta connect?</td><td>No. In the pilot the customer gives the strategist analyst access by hand. One-click connect gets built in parallel</td></tr>
+</table></div></details>
+<details><summary>Risks</summary><div>
+<ul>
+<li><b>Vitaley becomes the bottleneck.</b> Foresight's whole service is two founders. Cap the pilot at 10 and track hours from day one.</li>
+<li><b>Promising 24/7 we can't staff.</b> Say "a person within hours", never "always on".</li>
+<li><b>Manual Meta access does not scale.</b> Analyst access works for 10 pilots, not 100. One-click connect has to ship before the offer goes wide.</li>
+<li><b>Competitor prices are still partial.</b> Parker's quote above $2M spend and Foresight's price are both pending.</li>
+</ul></div></details>
+<details><summary>Where these numbers come from</summary><div>
+Competitor prices and service details: Foresight call 09-15 and Parker call 09-16, as their teams described them. Retention by plan, cancel reasons, Agency coupon count: retention dashboard, Stripe and Churnkey pulls 09-16. Software cost: July 2026 unit economics. Prompt count: Atria teardown 09-17. Pricing, pilot size and targets are proposals, not decisions.
+</div></details>
+</div>
+</section>
+
+<p class="foot">GetHookd CoS terminal · companion docs: service offer teardown (Foresight vs Parker vs GetHookd), Atria prompt library, retention dashboard.</p>
+</main></body></html>
