@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Onuha Buyers Sheet to ActiveCampaign</title>
+<style>
+:root{--bg:#f7f7f5;--surface:#fff;--soft:#f0f1ef;--line:#e1e3e1;--ink:#202124;--sub:#5d6166;--faint:#85898e;--blue:#326bdd;--blue-soft:#e8eef9;--green:#277b5e;--green-soft:#dcebe4;--amber:#8d5a0e;--amber-soft:#f3e7cf;--red:#b3261e;--red-soft:#f8e2df;--violet:#5b3fb0;--violet-soft:#ece6fa;--sans:-apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",Inter,Arial,sans-serif;--mono:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15.5px/1.62 var(--sans);-webkit-font-smoothing:antialiased}
+.shell{width:min(980px,calc(100% - 32px));margin:auto;padding:30px 0 80px}
+h1{font-size:28px;letter-spacing:-.03em;margin:0 0 8px}.sub{color:var(--sub);font-size:14.5px;margin:0 0 22px;max-width:78ch}
+section{margin-top:38px}h2{font-size:20px;letter-spacing:-.02em;margin:0 0 4px}h2 small{display:block;font-size:13.5px;font-weight:500;color:var(--sub);margin:2px 0 14px}
+h3{font-size:16px;margin:18px 0 6px}p{color:var(--sub);margin:8px 0}p b,li b{color:var(--ink)}
+.hero{background:#0f1c27;color:#e6edf3;border-radius:14px;padding:24px 26px}
+.hero h2{color:#fff;font-size:22px;margin:0 0 10px}.hero p{color:#b7c3ce;margin:6px 0}.hero b{color:#fff}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:16px 19px;margin-bottom:10px}
+.card h3{margin:0 0 6px;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.card h3 .tc{font:600 12.5px var(--mono);color:var(--faint)}
+table{width:100%;border-collapse:collapse;font-size:14.3px;margin-top:8px;background:var(--surface);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+th{text-align:left;font-size:11px;font-weight:600;color:var(--faint);text-transform:uppercase;letter-spacing:.06em;padding:10px 12px;border-bottom:1px solid var(--line);background:var(--soft)}
+td{padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top;color:var(--sub)}tr:last-child td{border-bottom:0}td b{color:var(--ink)}
+.pill{display:inline-block;font:600 10.5px var(--mono);padding:3px 8px;border-radius:999px;white-space:nowrap}
+.ok{background:var(--green-soft);color:var(--green)}.mid{background:var(--amber-soft);color:var(--amber)}.bad{background:var(--red-soft);color:var(--red)}
+.hy{background:var(--blue-soft);color:var(--blue)}.hf{background:var(--violet-soft);color:var(--violet)}
+.amber{background:var(--amber-soft);color:#5e3c0c;border-radius:12px;padding:15px 19px;margin:12px 0}.amber b{color:#3d2707}
+.tip{background:var(--blue-soft);color:#22447a;border-radius:12px;padding:15px 19px;margin:12px 0}.tip b{color:#15305a}
+ol,ul{padding-left:20px}li{color:var(--sub);margin:6px 0}
+.fold{display:grid;gap:8px}
+.fold .row{display:grid;grid-template-columns:34px 1fr auto;gap:12px;align-items:start;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+.fold .n{width:26px;height:26px;border-radius:50%;background:var(--ink);color:#fff;font:600 12px var(--sans);display:flex;align-items:center;justify-content:center}
+.fold .t b{display:block;color:var(--ink);font-size:15px}
+.fold .t .do{display:block;color:var(--ink);font-size:14.3px;margin-top:2px}
+.fold .t .why{display:block;color:var(--sub);font-size:14px;margin-top:4px}
+.fold .t .why i{font-style:normal;font-weight:700;color:var(--faint);text-transform:uppercase;font-size:11px;letter-spacing:.06em;margin-right:4px}
+.cmd{display:block;font:12.5px var(--mono);background:var(--soft);border:1px solid var(--line);border-radius:8px;padding:8px 10px;margin:6px 0 2px;white-space:pre-wrap;word-break:break-word;color:var(--ink)}
+.vo{font-size:18px;line-height:1.45;font-weight:650;color:var(--ink);margin:4px 0 10px}
+.line{margin:6px 0;color:var(--sub);font-size:14.3px}.line .pill{margin-right:6px}
+.os{font-size:13.5px;color:var(--faint);margin-top:8px}.os b{color:var(--ink)}
+details{background:var(--surface);border:1px solid var(--line);border-radius:12px;margin:10px 0}
+summary{cursor:pointer;padding:14px 18px;font-weight:700;list-style:none}summary::-webkit-details-marker{display:none}
+summary:after{content:"+";float:right;color:var(--faint)}details[open] summary:after{content:"\2212"}
+details .in{padding:0 18px 16px}
+.k{font:13px var(--mono);background:var(--soft);padding:1px 6px;border-radius:5px}
+.btns{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 6px}
+button{background:var(--ink);color:#fff;border:0;border-radius:8px;padding:9px 14px;font:600 13px var(--sans);cursor:pointer}
+button.ghost{background:var(--surface);color:var(--ink);border:1px solid var(--line)}
+.toast{color:var(--green);font-size:13px;min-height:18px}
+.foot{color:var(--faint);font-size:12.5px;margin-top:28px}
+@media (max-width:640px){.fold .row{grid-template-columns:30px 1fr}.fold .row .pill{grid-column:2}table{display:block;overflow-x:auto}}
+
+.fold details.step{margin:0;border-radius:10px}
+details.step summary{display:grid;grid-template-columns:26px 1fr auto 14px;gap:12px;align-items:center;padding:12px 14px;font-weight:600}
+details.step summary .st{color:var(--ink);font-size:15px;line-height:1.35}
+details.step summary .pill{grid-column:auto;margin:0}
+details.step summary:after{float:none;text-align:right}
+details.step .sb{padding:0 14px 14px 52px}
+details.beat{margin:0 0 10px}
+details.beat summary{display:flex;align-items:center;gap:10px;padding:14px 18px}
+details.beat summary .bt{font-size:16px;color:var(--ink)}
+details.beat summary .tc{margin-left:auto}
+details.beat summary:after{float:none;margin-left:8px}
+details.beat .in{padding:0 18px 16px}
+@media(max-width:600px){details.step .sb{padding:0 14px 14px 14px}details.step summary{grid-template-columns:24px 1fr auto 12px;gap:9px}}
+.fold .t .do b,.fold .t .why b{display:inline;font-size:inherit}
+</style>
+</head>
+<body>
+<div class="shell">
+<h1>Onuha buyers sheet to ActiveCampaign</h1>
+<p class="sub">How to make every new buyer get the welcome emails, using Zapier. For Patrick and Marius. About 15 minutes. Written 2 Oct 2026.</p>
+
+<div class="hero">
+<h2>What you are building</h2>
+<p><b>1.</b> Someone buys on onuha.com. They get access and the Whop receipt straight away.</p>
+<p><b>2.</b> Within about 5 minutes they appear as one new row in the Google Sheet <b>"Onuha Buyers"</b>.</p>
+<p><b>3.</b> Your Zap sees the new row and adds that person to ActiveCampaign with a tag.</p>
+<p><b>4.</b> The tag starts the welcome emails.</p>
+</div>
+
+<section><h2>What you need<small>Have these open before you start.</small></h2>
+<table>
+<tr><th>Thing</th><th>Detail</th></tr>
+<tr><td><b>The sheet</b></td><td>"Onuha Buyers", shared with you as a viewer. The link is in the WhatsApp group.</td></tr>
+<tr><td><b>Zapier</b></td><td>A plan that allows Filter steps (paid plans).</td></tr>
+<tr><td><b>ActiveCampaign</b></td><td>Your login, and the welcome emails already written.</td></tr>
+<tr><td><b>Google account</b></td><td>The one the sheet was shared with.</td></tr>
+</table>
+</section>
+
+<section><h2>The sheet in 30 seconds<small>One row per buyer. The Buyers tab is the list.</small></h2>
+<table>
+<tr><th>Column</th><th>What it means</th></tr>
+<tr><td><b>email</b></td><td>Where to send. It is the email they signed in with on onuha.com.</td></tr>
+<tr><td><b>status</b></td><td><span class="pill ok">active</span> they bought and have access. <span class="pill bad">removed</span> they refunded or lost access: stop all emails to them.</td></tr>
+<tr><td><b>reason</b></td><td>Why a row is removed (refunded, disputed, ended and so on). Empty when active.</td></tr>
+<tr><td><b>email_consent</b></td><td>TRUE means they ticked "Email me updates and offers".</td></tr>
+<tr><td><b>plan_cycle</b></td><td>Monthly or annual.</td></tr>
+<tr><td><b>first_paid_access_utc</b></td><td>When their access turned on (UTC time).</td></tr>
+<tr><td><b>member_id, plan_tier</b></td><td>Internal references. You can ignore them.</td></tr>
+</table>
+<div class="tip"><b>Three rules of the sheet.</b> Each buyer has exactly one row, for ever. Rows are never deleted: a refund changes status to removed. Staff and test accounts are left out.</div>
+<div class="amber"><b>Who gets what.</b> The welcome can go to every active buyer. Anything promotional goes only to people with email_consent TRUE.</div>
+</section>
+
+<section><h2>Step 1: get ActiveCampaign ready<small>Do this first, so the Zap has something to start.</small></h2>
+<div class="fold">
+<details class="step" open><summary><span class="n">1</span><span class="st">Make the tag and the welcome automation</span><span class="pill hf">ActiveCampaign</span></summary><div class="t sb"><span class="do">In ActiveCampaign, create a tag called <b>onuha-buyer</b>. Build the welcome automation with the start trigger <b>Tag is added: onuha-buyer</b>, set to run <b>once</b> per contact. Leave the automation <b>inactive</b> for now.</span><span class="why"><i>Why</i>The Zap only has to add one tag. The tag starts the emails, and "once" means nobody gets the welcome twice.</span></div></details>
+</div>
+</section>
+
+<section><h2>Steps 2 to 11: build the Zap<small>Click a step to fold it away when it is done.</small></h2>
+<div class="fold">
+<details class="step" open><summary><span class="n">2</span><span class="st">Start a new Zap</span><span class="pill hy">Zapier</span></summary><div class="t sb"><span class="do">Go to zapier.com, click <b>Create</b>, then <b>Zaps</b>.</span><span class="why"><i>Why</i>One Zap does the whole job: sheet row in, ActiveCampaign contact out.</span></div></details>
+<details class="step" open><summary><span class="n">3</span><span class="st">Trigger: Google Sheets, New Spreadsheet Row</span><span class="pill hy">Zapier</span></summary><div class="t sb"><span class="do">Click the Trigger box. App: <b>Google Sheets</b>. Trigger event: <b>New Spreadsheet Row</b>.</span><span class="why"><i>Why</i>It fires once for each new buyer row. Do not pick "New or Updated Spreadsheet Row" here, or a later status change would fire the welcome again.</span></div></details>
+<details class="step" open><summary><span class="n">4</span><span class="st">Connect the right Google account</span><span class="pill hy">Zapier</span></summary><div class="t sb"><span class="do">Under Account, sign in with the Google account the sheet was shared with (the one that can open "Onuha Buyers").</span><span class="why"><i>Why</i>Zapier can only read sheets that account can open. View access is enough for a trigger.</span></div></details>
+<details class="step" open><summary><span class="n">5</span><span class="st">Pick the sheet and the tab</span><span class="pill hy">Zapier</span></summary><div class="t sb"><span class="do">Spreadsheet: <b>Onuha Buyers</b>. Worksheet: <b>Buyers</b>.</span><span class="do" style="margin-top:6px">Not in the dropdown? Choose <b>Custom</b> and paste the sheet ID. The ID is the long code in the sheet link, between <b>/d/</b> and <b>/edit</b>.</span><span class="why"><i>Why</i>The Buyers tab is the list. The Sync tab only shows when the sheet last updated.</span></div></details>
+<details class="step" open><summary><span class="n">6</span><span class="st">Test the trigger</span><span class="pill hy">Zapier</span></summary><div class="t sb"><span class="do">Click <b>Test trigger</b>. You should see one buyer row with an email and a status.</span><span class="why"><i>Why</i>This proves Zapier can read the sheet before you build the rest.</span></div></details>
+<details class="step" open><summary><span class="n">7</span><span class="st">Add a filter: status is active</span><span class="pill hy">Zapier</span></summary><div class="t sb"><span class="do">Click <b>+</b>, choose <b>Filter by Zapier</b>. Only continue if: <b>status</b>, <b>(Text) Exactly matches</b>, <b>active</b>.</span><span class="why"><i>Why</i>Someone who refunded before their row landed arrives as "removed". The filter keeps them out of the welcome. Filter steps need a paid Zapier plan.</span></div></details>
+<details class="step" open><summary><span class="n">8</span><span class="st">Action: ActiveCampaign, Create or Update Contact</span><span class="pill hy">Zapier</span></summary><div class="t sb"><span class="do">Click <b>+</b>. App: <b>ActiveCampaign</b>. Action event: <b>Create or Update Contact</b>. Connect your ActiveCampaign account. Email: pick the <b>email</b> column from step 3. List: your Onuha list. Tags: <b>onuha-buyer</b>.</span><span class="do" style="margin-top:6px">Optional: map <b>email_consent</b> to a custom field, so you can keep promotions to people who said yes.</span><span class="why"><i>Why</i>"Create or Update" never makes a duplicate: a new person is created, an existing contact just gets the tag.</span></div></details>
+<details class="step" open><summary><span class="n">9</span><span class="st">Test with your own email</span><span class="pill hy">Zapier</span></summary><div class="t sb"><span class="do">Before you click Test step, replace the Email value with <b>your own email</b>. Run the test, check the contact and tag appear in ActiveCampaign, then switch Email back to the <b>email</b> column.</span><span class="why"><i>Why</i>A Zapier test writes real data. The sample row is a real buyer, so testing with their email would put a real customer through an untested setup.</span></div></details>
+<details class="step" open><summary><span class="n">10</span><span class="st">Publish, then switch the automation on</span><span class="pill hy">Zapier</span></summary><div class="t sb"><span class="do">Click <b>Publish</b> in Zapier. Then set the welcome automation to <b>Active</b> in ActiveCampaign.</span><span class="why"><i>Why</i>Publishing first means no buyer is missed between the two clicks.</span></div></details>
+<details class="step" open><summary><span class="n">11</span><span class="st">Add the people already in the sheet</span><span class="pill hf">ActiveCampaign</span></summary><div class="t sb"><span class="do">Anyone in the sheet from before you published: add them to ActiveCampaign by hand and give them the <b>onuha-buyer</b> tag (status active only).</span><span class="why"><i>Why</i>The Zap only fires for rows added after it is published. Earlier rows never trigger it.</span></div></details>
+</div>
+</section>
+
+<section><h2>Later: stop emails when someone refunds<small>Build this second, once the welcome works.</small></h2>
+<details><summary>A second Zap for removed buyers</summary><div style="padding:0 18px 16px">
+<p>When a buyer refunds or loses access, their row stays and <b>status</b> changes to <b>removed</b>.</p>
+<ol>
+<li>New Zap. Trigger: Google Sheets, <b>New or Updated Spreadsheet Row</b>, same sheet and tab. Set the trigger column to <b>status</b> if Zapier offers it.</li>
+<li>Filter: <b>status</b> exactly matches <b>removed</b>.</li>
+<li>Action: ActiveCampaign, <b>Remove Contact From Automation</b>, or <b>Add/Remove Tag From Contact</b> to add a tag like <b>onuha-removed</b> that ends your automations.</li>
+</ol>
+<p>Until this exists, check the sheet for removed rows once a day and stop those contacts by hand.</p>
+</div></details>
+</section>
+
+<section><h2>If something does not work</h2>
+<details><summary>The sheet is not in Zapier's dropdown</summary><div style="padding:0 18px 16px"><p>Check you connected the Google account the sheet was shared with. Then choose <b>Custom</b> in the Spreadsheet field and paste the sheet ID: the long code in the sheet link between <b>/d/</b> and <b>/edit</b>.</p></div></details>
+<details><summary>Test trigger finds no rows</summary><div style="padding:0 18px 16px"><p>Check the Worksheet is <b>Buyers</b>, not Sync. Open the sheet and confirm there is at least one buyer row under the header.</p></div></details>
+<details><summary>Someone bought but got no welcome</summary><div style="padding:0 18px 16px"><p>Check in this order: their row is in the sheet with status active; the Zap is published; the Zap history shows a run for that row; the automation is Active in ActiveCampaign. A row that was in the sheet before you published never triggers the Zap: add that person by hand.</p></div></details>
+<details><summary>How fast is it?</summary><div style="padding:0 18px 16px"><p>The row lands in the sheet within about 5 minutes of the purchase. Zapier then picks it up on its own schedule, which depends on your Zapier plan. Access to the site and the Whop receipt are instant and do not depend on any of this.</p></div></details>
+<details><summary>Can I edit the sheet?</summary><div style="padding:0 18px 16px"><p>It is view only for you, on purpose. If you need your own notes or columns, tell Vitaliy: columns from I onwards are free, but the header row and columns A to H must not change or the sheet stops updating.</p></div></details>
+</section>
+
+<p class="os" style="margin-top:34px">Questions: ask Vitaliy in the WhatsApp group.</p>
+</div>
+</body>
+</html>
