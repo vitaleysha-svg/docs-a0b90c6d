@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="robots" content="noindex,nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>API and MCP on the lower plans</title>
+<style>
+  :root{--bg:#f5f7fa;--card:#fff;--ink:#1b2230;--mut:#6a7589;--line:#e7eaf0;--grn:#2f7d4f;--red:#d64545;--amb:#c77d11;--blu:#2f6fed;--gold:#b8860b;--vio:#7b52c9}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;padding:36px 18px 80px}
+  .wrap{max-width:820px;margin:0 auto}
+  h1{font-size:23px;margin:0 0 3px}
+  .sub{color:var(--mut);font-size:13px;margin:0 0 14px}
+  .stats{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 18px}
+  .chip{background:#eef1f6;border-radius:20px;padding:5px 13px;font-size:12.5px;color:var(--mut)}
+  .chip b{color:var(--ink)}
+  .sec{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:19px 23px;margin:15px 0;box-shadow:0 1px 2px rgba(16,24,40,.04)}
+  .sec h2{font-size:16px;margin:0 0 4px}
+  .sec .lead{color:var(--mut);font-size:13px;margin:0 0 14px}
+  table{width:100%;border-collapse:collapse;font-size:13.6px}
+  th{text-align:left;padding:8px 10px;border-bottom:2px solid var(--line);color:var(--mut);font-size:11.5px;text-transform:uppercase;letter-spacing:.05em}
+  td{padding:11px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+  td:first-child{width:31%}
+  .who{font-weight:650}
+  .seg{display:inline-block;font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.04em;padding:2px 7px;border-radius:4px;color:#fff;margin-top:5px}
+  .s-on{background:var(--blu)} .s-late{background:var(--amb)}
+  .date{color:var(--mut);font-size:12px;display:block;margin-top:3px}
+  td ul{margin:0;padding-left:17px} td li{margin:5px 0}
+  .theme{padding:14px 0;border-top:1px solid var(--line)}
+  .theme:first-of-type{border-top:none;padding-top:2px}
+  .th-h{display:flex;gap:9px;align-items:baseline;flex-wrap:wrap}
+  .th-h b{font-size:15px}
+  .cnt{background:#eef1f6;color:var(--mut);border-radius:20px;padding:2px 10px;font-size:11.5px;font-weight:700}
+  .tag{font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.04em;padding:2px 7px;border-radius:4px;color:#fff}
+  .t-hot{background:var(--red)} .t-pipe{background:var(--grn)} .t-inf{background:#8a93a6}
+  .theme ul{margin:7px 0 0;padding-left:19px} .theme li{margin:4px 0;font-size:13.6px;color:#3a4458}
+  .know{padding:13px 0;border-top:1px solid var(--line)}
+  .know:first-of-type{border-top:none;padding-top:2px}
+  .know b{font-size:14.5px}
+  .know p{margin:4px 0 0;font-size:13.7px;color:#3a4458}
+  .q{margin:8px 0 0;padding:7px 12px;border-left:3px solid var(--line);background:#f7f9fc;border-radius:0 6px 6px 0;font-size:12.9px;color:#42506a;font-style:italic}
+  .flag{background:#fff8e6;border:1px solid #f0dca0;border-radius:9px;padding:12px 15px;font-size:13.2px;color:#6b5210;margin:14px 0 0}
+  .flag b{color:#1b2230}
+  .clean{background:#f2f8f4;border:1px solid #d5e9db;border-radius:9px;padding:13px 16px;font-size:13.4px;color:#2c4636}
+  .clean b{color:#1b2230}
+  .head{background:#1b2230;color:#fff;border-radius:12px;padding:18px 23px;margin:18px 0 0}
+  .head .l{font-size:11px;text-transform:uppercase;letter-spacing:.09em;color:#8b95a8;margin:0 0 6px}
+  .head p{margin:0;font-size:16.5px;font-weight:600;line-height:1.45}
+  .foot{color:var(--mut);font-size:12.5px;margin-top:20px;text-align:center}
+  .head{background:#1b2230;color:#fff;border-radius:12px;padding:16px 20px;margin:0 0 16px}
+  .head .s{margin:8px 0 0;font-size:13.6px;font-weight:400;color:#c9d0dc;line-height:1.5}
+  ol.t{margin:6px 0 0;padding-left:20px;font-size:13.8px} ol.t li{margin:4px 0}
+  details{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 20px;margin:10px 0}
+  details summary{cursor:pointer;font-weight:650;font-size:14.5px}
+  details[open] summary{margin-bottom:10px}
+  details p,details li{font-size:13.6px;color:#3a4458}
+  details ul{padding-left:19px}
+  .tw{overflow-x:auto}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<h1>API and MCP on the lower plans: who asked for it</h1>
+<p class="sub">2 Oct 2026 · for Alex and Mladen · from Vitaliy</p>
+
+<div class="stats">
+  <span class="chip">Cancel flow: <b>79</b> in Jun and Jul, <b>18</b> in Aug and Sep</span>
+  <span class="chip"><b>23 of 72</b> recorded calls since 4 Jul: the plan blocked API or MCP</span>
+  <span class="chip"><b>1,118</b> Team monthly payers, <b>$77.9k</b> MRR (33%)</span>
+  <span class="chip">Starter/Pro second payments after trials got MCP: <b>53.8% vs 54.9%</b>, no measurable change</span>
+</div>
+
+<div class="head">
+  <p class="l">The answer</p>
+  <p style="font-size:13px;opacity:.85;margin:0 0 10px">Sources: Churnkey (what people typed when cancelling, with their plan) · Fathom (our recorded customer calls) · GHL (customer emails). Window: 1 Aug to 2 Oct 2026. Starter and Pro only (plus 1 person on the old $19 plan).</p>
+  <p>Yes, but very few: 25 people in two months.</p>
+  <table style="width:100%;border-collapse:collapse;font-size:14px;color:#fff;margin:10px 0 4px">
+    <tr><td style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,.15)">Churnkey cancel flow</td><td style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,.15);text-align:right"><b>18</b> of 3,491 Starter and Pro people who opened it (0.5%)</td></tr>
+    <tr><td style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,.15)">Fathom calls</td><td style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,.15);text-align:right"><b>6</b> of 45 customer calls (13%)</td></tr>
+    <tr><td style="padding:5px 0">GHL emails</td><td style="padding:5px 0;text-align:right"><b>1</b> of 783 people who emailed us (0.1%)</td></tr>
+  </table>
+  <p class="s">For comparison, June and July: 79 of 3,887 in the cancel flow (2.0%). Trials started including the AI connection in late July.</p>
+</div>
+
+
+
+
+
+<div class="sec">
+  <h2>What opening MCP on the lower plans would mean</h2>
+  <p class="lead">Mechanisms only. A number appears where we can count it, "unknown" where we cannot. Dollar figures are monthly revenue before Stripe fees.</p>
+  <div class="tw"><table>
+    <tr><th>Scenario</th><th>What we gain</th><th>What we risk</th><th>What it costs us</th><th>What we don't know yet</th></tr>
+    <tr><td><b>MCP on Pro, not Starter</b></td><td>Pro customers who want MCP stop leaving over it: 1 to 3 paying Pro customers a month named it when cancelling (Jun to Sep)</td><td>Team payers moving down to Pro, $30 a month each (826 pay the full $79), and fewer upgrades into Team (64 to 102 full-price moves a month, Jun to Aug)</td><td>To serve: unknown. To build: unknown</td><td>How many Team payers would fit on Pro (150 credits, 3 seats)</td></tr>
+    <tr><td><b>MCP on Starter and Pro</b></td><td>The people counted above: 25 in Aug and Sep</td><td>Team payers moving to Starter ($50 a month each) or Pro ($30), and fewer upgrades into Team</td><td>To serve: unknown. To build: unknown</td><td>How many Team payers would fit on Starter (50 credits, 1 seat) or Pro</td></tr>
+    <tr><td><b>Paid MCP add-on on Starter and Pro</b> (for example $20 a month)</td><td>Add-on revenue from each buyer. How many would buy: unknown</td><td>Team payers moving to Pro plus add-on ($10 a month less each) or Starter plus add-on ($30 less)</td><td>Billing build: unknown (Stripe already bills $20-a-month seat add-ons). To serve: unknown</td><td>Uptake, and how many Team payers would switch</td></tr>
+    <tr><td><b>MCP on Starter and Pro with no extra credits</b> (heavy users buy credit packs or move to Team)</td><td>Credit-pack sales when MCP users run out (100 credits for $20). Starter and Pro buyers spent $40 to $60 a month on packs in Aug and Sep</td><td>The same as MCP on Starter and Pro for every Team payer whose use fits in 50 or 150 credits. Pro plus one $20 pack (250 credits) is still $10 under Team</td><td>To serve: unknown. To build: unknown (MCP credit rates are already set per plan)</td><td>Credits per typical agent request (not settled, see Credits below), and how many credits Team payers use each month</td></tr>
+  </table></div>
+  <p class="flag"><b>Arithmetic, not a forecast:</b> if 10% of the 826 Team monthly payers on the full $79 moved down to Pro, revenue would fall by about $2.5k a month; if 50%, about $12.4k. The real share is unknown until per-team usage data exists. The other 292 Team monthly payers are on discounts, 205 of them at $39.50, below Pro's $49.</p>
+  <p class="lead" style="margin:12px 0 0">Where the risk sits: with Team payers moving down and with fewer upgrades into Team, not with Starter and Pro customers. How many Team payers would move is the deciding unknown; a usage export by team ID (MCP calls, credits used and seats, per month) would count it. What it costs us to serve MCP on more accounts, and to build any of these, is unknown for every scenario.</p>
+</div>
+
+<details>
+  <summary>Demand: how many people hit the gate, and when</summary>
+  <div class="tw"><table>
+    <tr><th>Month</th><th>Starter/Pro monthly trial starts</th><th>Trial cancels naming the gate</th><th>Paying Starter/Pro cancels naming it</th></tr>
+    <tr><td>Jun</td><td>3,133</td><td>42 (1.3%)</td><td>6</td></tr>
+    <tr><td>Jul</td><td>2,472</td><td>26 (1.1%)</td><td>5</td></tr>
+    <tr><td>Aug</td><td>1,751</td><td>1, plus 1 on an annual trial</td><td>2</td></tr>
+    <tr><td>Sep</td><td>1,603</td><td>1, plus 3 on annual trials</td><td>7</td></tr>
+  </table></div>
+  <ul>
+    <li>Monthly-trial cancels naming the gate ran at 4 to 17 a week from 8 Jun to 19 Jul, then 2 in total in the nine weeks from 27 Jul (plus 4 on annual trials). Trials started including MCP in late July.</li>
+    <li>Since August most of it comes after the trial: in the cancel flow, 12 paying against 6 on a trial. Paying customers in their own words: "cant use claude anymore with starter subscription" (11 Sep); "I got this because it had the AI connection just to find out my plan doesn't have acces to it" (18 Sep, Pro).</li>
+    <li>Calls, 4 Jul to 2 Oct: the plan blocked API or MCP on 23 of 72 recorded customer calls (13 in July, 7 in August, 3 in September); on 11 of them the customer raised it first. A Starter customer, unprompted: "I also would like the MCP to be available for lower plans."</li>
+  </ul>
+</details>
+
+<details>
+  <summary>What changed after trials started including MCP (late July)</summary>
+  <div class="tw"><table>
+    <tr><th>Starter + Pro monthly trials</th><th>Before (8 Jun to 19 Jul)</th><th>After (27 Jul to 6 Sep)</th></tr>
+    <tr><td>Cancelled on day one</td><td>20.7%</td><td>11.3% (Team trials: 15.6% to 10.6%)</td></tr>
+    <tr><td>Trial to paid</td><td>35.9%</td><td>43.1% (Team trials rose more, 19.9% to 34.4%)</td></tr>
+    <tr><td>Second payment</td><td>53.8%</td><td>54.9% (against other "before" weeks: -3.1 to +1.9 points)</td></tr>
+    <tr><td>Second-payment revenue per 100 trial starts, first 4 weeks of each window</td><td>$687 (8 Jun to 5 Jul); $772 for 25 May to 7 Jun</td><td>$731 (27 Jul to 23 Aug)</td></tr>
+    <tr><td>First payment on Team or Agency (switched during the trial)</td><td>6.2% (87 of 1,413; 77 at full price)</td><td>1.6% (16 of 970; 8 at full price, 8 on the discounted Agency offer)</td></tr>
+  </table></div>
+  <ul>
+    <li>Losing MCP at the end of the trial did no harm we can detect (53.8% vs 54.9%, margin about plus or minus 4.6 points); the direction depends on which "before" weeks you pick.</li>
+    <li>Full-price Team and Agency payments within 38 days, per 100 monthly trial starts on any plan, rose: 6.2 and 7.1 before, 9.8 after (a stricter count gives 5.7, 6.4 and 9.2; both rise). Team's share of monthly trial starts also rose, from 22% to 39%, and why is not confirmed. Whether the people who stopped switching during the trial upgraded later is not traced.</li>
+    <li>Same weeks, other changes (from our daily logs): trial emails fixed (20 Jul), cancel-flow plan change live (23 Jul), annual trials launched (27 Jul), bonus credits and a new onboarding step bundled with MCP. List prices did not change: one Stripe price per plan and billing period on every trial-start invoice since 15 May.</li>
+  </ul>
+</details>
+
+<details>
+  <summary>Team plan facts behind the table</summary>
+  <ul>
+    <li>Team monthly: 1,118 payers and $77.9k MRR (33% of all MRR; the sum of each active subscription's last charge). 826 paid the full $79 on their last charge. Of the other 292, 205 pay $39.50 and 43 upgraded mid-cycle and have not reached their first full charge yet.</li>
+    <li>198 of the 826 came up from Starter or Pro on the same subscription or after paying on them (232 counting the 43 mid-cycle upgraders). How many of them use MCP is unknown.</li>
+    <li>Full-price moves up to Team from Starter or Pro, during or after the trial: 102 (Jun), 85 (Jul) and 64 (Aug) confirmed by a full $79 charge. Counting every move without a coupon, before its first full charge: 117, 101, 77 and 84 (Jun to Sep). September has 42 confirmed so far, with 40 more not yet due.</li>
+    <li>The hand-made workaround: about 13 blocked callers were offered a 3-month discount code. Of the 9 found in Stripe, 2 are on an MCP plan today (paying $15.80 and $30.09), 1 left, 1 went back to Starter, and 5 are still on Starter or Pro: 1 never received the code, 1 put off the decision, 1 chose a 50% code on another plan, and 2 accepted on the call but did not move (one of those 2 is a likely, not certain, match).</li>
+  </ul>
+</details>
+
+<details>
+  <summary>Does MCP access keep people longer?</summary>
+  <ul>
+    <li>Second-payment rate by the plan people started their trial on, trials from 27 Jul to 6 Sep: Team (has MCP) 49.5% (279 people), Starter 53.4% (526), Pro 61.3% (119). Trials from 8 Jun to 19 Jul: Team 49.6%, Starter 56.3%, Pro 47.8%. Team is not ahead in either window.</li>
+    <li>Monthly churn by price paid, Jun to Aug, failed payments included: Team 23.9%, Pro 28.8%, Starter 30.8%. Team payers churn less, but price and buyer intent are mixed in.</li>
+    <li>No per-customer MCP or API usage is readable in GHL, Stripe or our MCP tools.</li>
+  </ul>
+</details>
+
+<details>
+  <summary>Credits: what MCP use costs a customer, and what top-ups earn</summary>
+  <ul>
+    <li>Credits included each month, shared across the account: Starter 50, Pro 150, Team 400, Agency 800 (pricing page, read 28 Sep).</li>
+    <li>MCP charges per result or per call, multiplied by a credit rate set per plan; looking up an ad, transcribing and the swipe file are free (our MCP tool descriptions, read 2 Oct).</li>
+    <li>Credits per typical agent request are not settled. Our 22 Sep prompt tests summed 0.15 to 0.5 credits per prompt from the per-call meter, but the account balance fell 3.7 to 10.6 credits per run while other runs shared the account.</li>
+    <li>Credit packs, one-time, in Stripe: 100 credits for $20, 300 for $50, 600 for $100. Since 1 Jun: 111 bought by 70 customers, $3,287 in total, $560 to $1,140 a month. Buyers on Starter or Pro spent $40 and $60 in Aug and Sep; buyers on Team or Agency $680 and $667. 60 of the 70 bought in one month only. There is no recurring credit add-on.</li>
+    <li>TrendTrack puts API and MCP on its $89 Pro plan with 10,000 separate API credits a month, not on its $59 Starter (our teardown, 18 Aug).</li>
+  </ul>
+</details>
+
+
+
+
+
+<p class="foot">Counted on 2 Oct from Stripe, Churnkey, GHL email and Fathom recordings, read-only. Nothing on this page is a forecast; the one arithmetic line is labelled.</p>
+</div>
+</body>
+</html>
